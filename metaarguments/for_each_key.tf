@@ -28,3 +28,29 @@
 #     }
   
 # }
+
+
+
+
+resource "google_compute_instance" "example" {
+  for_each = {
+    "web-server" = "e2-medium"
+    "app-server" = "e2-standard-2"
+    "db-server"  = "e2-standard-4"
+  }
+
+  name         = each.key
+  machine_type = each.value
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+    }
+  }
+
+  network_interface {
+    network = "default"
+    access_config {}
+  }
+}
