@@ -1,7 +1,7 @@
-provider "google" {
-    project = "emerald-spring-465406-s1"
-    region = "us-central1"
-}
+# provider "google" {
+#     project = "emerald-spring-465406-s1"
+#     region = "us-central1"
+# }
 
 
 # variable "vm_names" {
