@@ -41,11 +41,12 @@ resource "google_compute_instance" "name" {
       }
     }
     network_interface {
-      network = "default"
+        network = "vpc-1"
       access_config {
         
       }
     }
+    depends_on = [ google_compute_network.vpc ]
     service_account {
       #email = "service_account_id@project_id.iam.gserviceaccount.com"
       email = "${var.service_account_id}@${var.project_id}.iam.gserviceaccount.com"
@@ -59,3 +60,8 @@ resource "google_compute_instance" "name" {
   
 }
 
+resource "google_compute_network" "vpc" {
+    name = "vpc-1"
+    auto_create_subnetworks = true
+  
+}
