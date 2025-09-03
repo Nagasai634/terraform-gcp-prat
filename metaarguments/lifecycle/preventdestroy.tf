@@ -20,9 +20,9 @@ resource "google_compute_instance" "vm1"{
         }
     }
 
-//with lifecycle(prevent_destroy ) : resource  wiilnot get destroyed when we give this 
-    # lifecycle {
-    #     prevent_destroy = true
-    # }
+//with lifecycle(prevent_destroy ) : resource  will not get destroyed when
+    lifecycle {
+        prevent_destroy = true
+    }
 
 }
