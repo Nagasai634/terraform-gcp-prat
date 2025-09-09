@@ -21,3 +21,7 @@
 #    subnetwork = "subnet5"
 #    firewall = "allow1"
 # } ]
+
+
+env = "xyz"
+location = "europe-west"

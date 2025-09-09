@@ -1,12 +1,12 @@
-# provider "google" {
-#     project = var.project_id
-#     region = "us-central1"
+provider "google" {
+    project = var.project_id
+    region = var.location
   
-# }
+}
 
 
 # resource "google_compute_instance" "tf_vm1" {
-#     name = var.vm_name
+#     name = var.env
 #     zone = "us-central1-c"
 #     machine_type = var.machine_types[var.environment]
 #     boot_disk {
