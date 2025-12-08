@@ -44,19 +44,19 @@ pipeline:
                         command: apply
                   - step:
                       type: IACMTerraformPlugin
-                      name: IACMTerraformPlugin_4
-                      identifier: IACMTerraformPlugin_4
+                      name: destroy
+                      identifier: destroy
                       spec:
                         command: destroy
                       timeout: 1h
         tags: {}
   variables:
-    - name: terraform
+    - name: terraform_apply
       type: String
       description: ""
       required: true
       value: apply
-    - name: tfdestroy
+    - name: terraform_destroy
       type: String
       description: ""
       required: true
