@@ -1,9 +1,9 @@
-# # project_id = "emerald-spring-465406-s1"
-# # vm_name = "teja-vm"
-# # machine_type = "e2-micro"
-# # network = "sai-vpc"
-# # subnetwork = "sai-subnet"
-# # firewall = "allow-firewall"
+# project_id = "emerald-spring-465406-s1"
+# vm_name = "teja-vm"
+# machine_type = "e2-micro"
+# network = "sai-vpc"
+# subnetwork = "sai-subnet"
+# firewall = "allow-firewall"
 
 
 # ##list(objects)
@@ -23,5 +23,5 @@
 # } ]
 
 
-env = "xyz"
-location = "europe-west"
+#env = "xyz"
+#location = "europe-west"
